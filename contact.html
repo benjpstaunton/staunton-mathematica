@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Staunton Tutoring</title>
+
+<!-- Open Graph placeholders -->
+<meta property="og:title" content="Staunton Tutoring" />
+<meta property="og:description" content="High‑quality, personal 11+ and Maths tutoring for ages 9–18." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="/assets/og-placeholder.png" />
+<meta property="og:url" content="/" />
+
+<link rel="icon" href="/assets/logo.png" type="image/png" />
+<link rel="apple-touch-icon" href="/assets/logo.png" />
+<link rel="preload" href="/assets/styles.css" as="style" />
+<link rel="stylesheet" href="/assets/styles.css" />
+<script defer src="/assets/script.js"></script>
+
+</head>
+<body>
+<header>
+  <div class="container nav" role="navigation" aria-label="Primary">
+    <a class="brand" href="/index.html" aria-label="Staunton Tutoring home">
+      <img src="/assets/logo.png" alt="Staunton logo" />
+      <span>Staunton Tutoring</span>
+    </a>
+
+    <button class="menu-button" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+    <ul id="primary-menu" class="primary" role="menubar">
+      <li role="none"><a role="menuitem" class="navlink" href="/index.html">Home</a></li>
+      <li role="none"><a role="menuitem" class="navlink" href="/services.html">Tutoring Services</a></li>
+
+      <li role="none" class="dropdown" aria-expanded="false">
+        <button class="navlink dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="about-menu">
+          About
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"/></svg>
+        </button>
+        <div id="about-menu" class="dropdown-menu" role="menu">
+          <a role="menuitem" href="/about/bio.html">Bio</a>
+          <a role="menuitem" href="/about/approach.html">Approach</a>
+        </div>
+      </li>
+
+      <li role="none"><a role="menuitem" class="navlink" href="/contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="container">
+  <section id="contact" class="reveal" aria-labelledby="contact-title">
+    <h2 id="contact-title">Contact</h2>
+    <p class="lead">Use the form below and I’ll reply promptly.</p>
+    <form id="contact-form" novalidate>
+      <div>
+        <label for="name">Name</label>
+        <input id="name" name="name" autocomplete="name" required aria-describedby="name-err" />
+        <div id="name-err" class="error">Please enter your name.</div>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-err" />
+        <div id="email-err" class="error">Please enter a valid email.</div>
+      </div>
+      <div>
+        <label for="phone">Phone <span class="small">(optional)</span></label>
+        <input id="phone" name="phone" inputmode="tel" pattern="^[+\d][\d\s()-]{6,}$" aria-describedby="phone-err" />
+        <div id="phone-err" class="error">Please enter a valid phone number.</div>
+      </div>
+      <div>
+        <label for="year">Child’s year group</label>
+        <select id="year" name="year" required aria-describedby="year-err">
+          <option value="">Select…</option>
+          <option>Year 5</option>
+          <option>Year 6</option>
+          <option>GCSE (Y10–11)</option>
+          <option>A‑Level (Y12–13)</option>
+        </select>
+        <div id="year-err" class="error">Please choose a year group.</div>
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required aria-describedby="message-err"></textarea>
+        <div id="message-err" class="error">Please add a brief message.</div>
+      </div>
+
+      <div class="cta-row">
+        <button class="cta primary" type="submit">Send</button>
+        <a class="cta secondary" id="mailto-fallback" href="mailto:ben.jp.staunton@iclould.com?subject=Tutoring%20Enquiry">Email instead</a>
+      </div>
+      <p id="form-status" class="small" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+</main>
+<footer>
+  <div class="container foot">
+    <div class="small">Email: <a href="mailto:ben.jp.staunton@iclould.com">ben.jp.staunton@iclould.com</a> · LinkedIn: <a href="https://www.linkedin.com/in/ben-staunton/" target="_blank" rel="noopener">ben-staunton</a></div>
+    <div class="small">© <span id="year"></span> Staunton Tutoring · <a href="#">Small print</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
