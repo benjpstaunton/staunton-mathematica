@@ -1,12 +1,12 @@
 :root {
-  --bg: #ffffff;
-  --text: #1a1a1a;       /* main dark text */
-  --brand: #002d72;      /* logo/nav blue */
-  --brand-600: #002d72;  /* consistency */
-  --muted: #555;         /* muted text */
-  --surface: #ffffff;    /* panels/cards */
-  --border: #e0e0e0;     /* light border */
-  --focus: #002d72;      /* focus outline */
+  --bg: #ffffff;        /* page background → white */
+  --text: #1a1a1a;      /* main body text → dark gray/black */
+  --brand: #002d72;     /* logo/nav blue */
+  --brand-600: #002d72; /* consistency */
+  --muted: #555;        /* muted text (e.g. kicker text, footer) */
+  --surface: #ffffff;   /* panels/cards → also white */
+  --border: #e0e0e0;    /* light gray border */
+  --focus: #002d72;     /* focus outline (blue) */
 }
 
 body {
