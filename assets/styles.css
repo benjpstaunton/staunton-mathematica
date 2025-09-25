@@ -1,8 +1,8 @@
 :root {
   --bg: #ffffff;
   --text: #1a1a1a;       /* main dark text */
-  --brand: #002d72;      /* logo blue */
-  --brand-600: #002d72;  /* same for consistency */
+  --brand: #002d72;      /* logo/nav blue */
+  --brand-600: #002d72;  /* consistency */
   --muted: #555;         /* muted text */
   --surface: #ffffff;    /* panels/cards */
   --border: #e0e0e0;     /* light border */
@@ -16,6 +16,7 @@ body {
   font-family: system-ui, sans-serif;
 }
 
+/* ---------- Header / Nav ---------- */
 header {
   background: var(--surface);
   border-bottom: 1px solid var(--border);
@@ -38,7 +39,7 @@ header {
 }
 
 .brand img {
-  height: 64px;
+  height: 80px;  /* logo size – tweak as needed */
   width: auto;
 }
 
@@ -50,8 +51,7 @@ header {
   padding: 0;
 }
 
-.nav a.navlink,
-.dropdown-toggle {
+.nav a.navlink {
   font-weight: 600;
   color: var(--brand);
   background: none;
@@ -60,29 +60,11 @@ header {
   text-decoration: none;
 }
 
-.nav a.navlink:hover,
-.dropdown-toggle:hover {
+.nav a.navlink:hover {
   text-decoration: underline;
 }
 
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  background: white;
-  border: 1px solid var(--border);
-  margin-top: 0.5rem;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: flex;
-  flex-direction: column;
-}
-
-.dropdown-menu a {
-  padding: 0.5rem 1rem;
-  color: var(--brand);
-}
-
+/* ---------- Hero section ---------- */
 .hero {
   padding: 4rem 1rem;
   background: var(--surface);
@@ -100,6 +82,7 @@ header {
   color: var(--muted);
 }
 
+/* ---------- CTAs ---------- */
 .cta {
   background: var(--brand);
   color: white;
@@ -114,6 +97,7 @@ header {
   color: var(--brand);
 }
 
+/* ---------- Footer ---------- */
 footer {
   padding: 1rem;
   background: var(--surface);
