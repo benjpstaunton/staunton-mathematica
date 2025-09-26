@@ -17,7 +17,7 @@
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="assets/styles.css?v=11" />
+<link rel="stylesheet" href="assets/styles.css?v=12" />
 <script defer src="assets/script.js"></script>
 </head>
 <body>
@@ -28,10 +28,10 @@
       <span>Staunton Tutoring</span>
     </a>
     <ul id="primary-menu" class="primary" role="menubar">
-      <li role="none"><a role="menuitem" class="navlink" href="index.html">Home</a></li>
-      <li role="none"><a role="menuitem" class="navlink" href="services.html">Tutoring Services</a></li>
-      <li role="none"><a role="menuitem" class="navlink" href="about.html">About</a></li>
-      <li role="none"><a role="menuitem" class="navlink" href="contact.html">Contact</a></li>
+      <li><a class="navlink" href="index.html">Home</a></li>
+      <li><a class="navlink" href="services.html">Tutoring Services</a></li>
+      <li><a class="navlink" href="about.html">About</a></li>
+      <li><a class="navlink" href="contact.html">Contact</a></li>
     </ul>
   </div>
 </header>
@@ -41,7 +41,7 @@
   <section class="contact-section container">
     <div class="hero-box contact-box">
       <h1>Contact Me</h1>
-      <p>If you’d like to enquire about tutoring or arrange a consultation, please fill in the form below:</p>
+      <p>Please fill in the form below to enquire about tutoring or arrange a free consultation:</p>
       
       <form name="contact" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="contact" />
@@ -57,8 +57,31 @@
         </div>
 
         <div class="form-group">
+          <label for="student-name">Student's Name</label>
+          <input type="text" id="student-name" name="student-name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="year-group">Year Group</label>
+          <input type="text" id="year-group" name="year-group" required />
+        </div>
+
+        <div class="form-group">
           <label for="subject">Subject</label>
-          <input type="text" id="subject" name="subject" />
+          <select id="subject" name="subject" required>
+            <option value="">Select...</option>
+            <option>GCSE Mathematics</option>
+            <option>GCSE Further Mathematics</option>
+            <option>GCSE Statistics</option>
+            <option>A-Level Mathematics</option>
+            <option>A-Level Further Mathematics</option>
+            <option>A-Level Statistics</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="exam-board">Exam Board</label>
+          <input type="text" id="exam-board" name="exam-board" placeholder="e.g. Edexcel, AQA, OCR" />
         </div>
 
         <div class="form-group">
