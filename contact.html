@@ -3,91 +3,61 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Contact · Staunton Tutoring</title>
+<title>Contact | Staunton Tutoring</title>
 
-<!-- Open Graph -->
-<meta property="og:title" content="Staunton Tutoring" />
-<meta property="og:description" content="High-quality, personal 11+ and Maths tutoring for ages 9–18." />
+<meta property="og:title" content="Contact | Staunton Tutoring" />
+<meta property="og:description" content="Get in touch with Staunton Tutoring for Mathematics and Statistics tuition." />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="/assets/og-placeholder.png" />
+<meta property="og:image" content="assets/og-placeholder.png" />
 <meta property="og:url" content="/contact.html" />
 
-<!-- Favicon & app icons -->
-<link rel="icon" href="/logo.png" type="image/png" />
-<link rel="apple-touch-icon" href="/logo.png" />
+<link rel="icon" href="logo.png" type="image/png" />
+<link rel="apple-touch-icon" href="logo.png" />
 
-<link rel="preload" href="/assets/styles.css" as="style" />
-<link rel="stylesheet" href="/assets/styles.css" />
-<script defer src="/assets/script.js"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/styles.css?v=9" />
+<script defer src="assets/script.js"></script>
 </head>
 <body>
 <header>
   <div class="container nav" role="navigation" aria-label="Primary">
-    <a class="brand" href="/index.html" aria-label="Staunton Tutoring home">
-      <img src="/logo.png" alt="Staunton logo" />
+    <a class="brand" href="index.html" aria-label="Staunton Tutoring home">
+      <img src="logo.png" alt="Staunton logo" />
       <span>Staunton Tutoring</span>
     </a>
-
-    <button class="menu-button" aria-expanded="false" aria-controls="primary-menu">Menu</button>
     <ul id="primary-menu" class="primary" role="menubar">
-      <li role="none"><a role="menuitem" class="navlink" href="/index.html">Home</a></li>
-      <li role="none"><a role="menuitem" class="navlink" href="/services.html">Tutoring Services</a></li>
-      <li role="none"><a role="menuitem" class="navlink" href="/about.html">About</a></li>
-      <li role="none"><a role="menuitem" class="navlink" href="/contact.html">Contact</a></li>
+      <li role="none"><a role="menuitem" class="navlink" href="index.html">Home</a></li>
+      <li role="none"><a role="menuitem" class="navlink" href="services.html">Tutoring Services</a></li>
+      <li role="none"><a role="menuitem" class="navlink" href="about.html">About</a></li>
+      <li role="none"><a role="menuitem" class="navlink" href="contact.html">Contact</a></li>
     </ul>
   </div>
 </header>
 
-<main class="container">
-  <section id="contact" class="reveal" aria-labelledby="contact-title">
-    <h2 id="contact-title">Contact</h2>
-    <p class="lead">Use the form below and I’ll reply promptly.</p>
-    <form id="contact-form" novalidate>
-      <div>
-        <label for="name">Name</label>
-        <input id="name" name="name" autocomplete="name" required aria-describedby="name-err" />
-        <div id="name-err" class="error">Please enter your name.</div>
-      </div>
-      <div>
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-err" />
-        <div id="email-err" class="error">Please enter a valid email.</div>
-      </div>
-      <div>
-        <label for="phone">Phone <span class="small">(optional)</span></label>
-        <input id="phone" name="phone" inputmode="tel" pattern="^[+\d][\d\s()-]{6,}$" aria-describedby="phone-err" />
-        <div id="phone-err" class="error">Please enter a valid phone number.</div>
-      </div>
-      <div>
-        <label for="year">Child’s year group</label>
-        <select id="year" name="year" required aria-describedby="year-err">
-          <option value="">Select…</option>
-          <option>Year 5</option>
-          <option>Year 6</option>
-          <option>GCSE (Y10–11)</option>
-          <option>A-Level (Y12–13)</option>
-        </select>
-        <div id="year-err" class="error">Please choose a year group.</div>
-      </div>
-      <div>
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required aria-describedby="message-err"></textarea>
-        <div id="message-err" class="error">Please add a brief message.</div>
-      </div>
+<main>
+  <!-- Central Contact Box -->
+  <section class="contact-section container">
+    <div class="hero-box contact-box">
+      <h1>Contact Me</h1>
+      <p>If you’d like to enquire about tutoring or arrange a consultation, please get in touch:</p>
+      <p><strong>Email:</strong> <a href="mailto:ben.jp.staunton@iclould.com">ben.jp.staunton@iclould.com</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ben-staunton/" target="_blank" rel="noopener">ben-staunton</a></p>
+      <p>I aim to reply within 24 hours. Looking forward to hearing from you!</p>
+    </div>
+  </section>
 
-      <div class="cta-row">
-        <button class="cta primary" type="submit">Send</button>
-        <a class="cta secondary" id="mailto-fallback" href="mailto:ben.jp.staunton@iclould.com?subject=Tutoring%20Enquiry">Email instead</a>
-      </div>
-      <p id="form-status" class="small" role="status" aria-live="polite"></p>
-    </form>
+  <!-- DBS GIF -->
+  <section class="dbs">
+    <img src="assets/EDBS.gif" alt="Enhanced DBS Checked" />
   </section>
 </main>
 
 <footer>
   <div class="container foot">
     <div class="small">Email: <a href="mailto:ben.jp.staunton@iclould.com">ben.jp.staunton@iclould.com</a> · LinkedIn: <a href="https://www.linkedin.com/in/ben-staunton/" target="_blank" rel="noopener">ben-staunton</a></div>
-    <div class="small">© <span id="year"></span> Staunton Tutoring · <a href="#">Small print</a></div>
+    <div class="small">© <span id="year"></span> Staunton Tutoring</div>
   </div>
 </footer>
 </body>
