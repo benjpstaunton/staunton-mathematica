@@ -93,7 +93,6 @@ header {
   height: 100%;
   object-fit: cover;
   transform: scale(1);
-  transition: transform 0.2s linear;
 }
 
 .hero-content {
@@ -102,7 +101,6 @@ header {
   max-width: 700px;
 }
 
-/* Box behind hero text */
 .hero-box {
   background: rgba(255, 255, 255, 0.85);
   padding: 2rem;
@@ -183,7 +181,7 @@ header {
   padding: 1rem;
 }
 
-/* ---------- Testimonials (cards) ---------- */
+/* ---------- Testimonials ---------- */
 .testimonials {
   display: grid;
   gap: 1.5rem;
