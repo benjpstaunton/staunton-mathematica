@@ -3,84 +3,89 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Tutoring Services · Staunton Tutoring</title>
+<title>Tutoring Services | Staunton Tutoring</title>
 
-<!-- Open Graph -->
-<meta property="og:title" content="Staunton Tutoring" />
-<meta property="og:description" content="High-quality, personal 11+ and Maths tutoring for ages 9–18." />
+<meta property="og:title" content="Tutoring Services | Staunton Tutoring" />
+<meta property="og:description" content="Specialist Mathematics and Statistics tutoring for GCSE, A-Level, and university preparation." />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="/assets/og-placeholder.png" />
+<meta property="og:image" content="assets/og-placeholder.png" />
 <meta property="og:url" content="/services.html" />
 
-<!-- Favicon & app icons -->
-<link rel="icon" href="/logo.png" type="image/png" />
-<link rel="apple-touch-icon" href="/logo.png" />
+<link rel="icon" href="logo.png" type="image/png" />
+<link rel="apple-touch-icon" href="logo.png" />
 
-<link rel="preload" href="/assets/styles.css" as="style" />
-<link rel="stylesheet" href="/assets/styles.css" />
-<script defer src="/assets/script.js"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/styles.css?v=9" />
+<script defer src="assets/script.js"></script>
 </head>
 <body>
 <header>
   <div class="container nav" role="navigation" aria-label="Primary">
-    <a class="brand" href="/index.html" aria-label="Staunton Tutoring home">
-      <img src="/logo.png" alt="Staunton logo" />
+    <a class="brand" href="index.html" aria-label="Staunton Tutoring home">
+      <img src="logo.png" alt="Staunton logo" />
       <span>Staunton Tutoring</span>
     </a>
-
-    <button class="menu-button" aria-expanded="false" aria-controls="primary-menu">Menu</button>
     <ul id="primary-menu" class="primary" role="menubar">
-      <li role="none"><a role="menuitem" class="navlink" href="/index.html">Home</a></li>
-      <li role="none"><a role="menuitem" class="navlink" href="/services.html">Tutoring Services</a></li>
-      <li role="none"><a role="menuitem" class="navlink" href="/about.html">About</a></li>
-      <li role="none"><a role="menuitem" class="navlink" href="/contact.html">Contact</a></li>
+      <li role="none"><a role="menuitem" class="navlink" href="index.html">Home</a></li>
+      <li role="none"><a role="menuitem" class="navlink" href="services.html">Tutoring Services</a></li>
+      <li role="none"><a role="menuitem" class="navlink" href="about.html">About</a></li>
+      <li role="none"><a role="menuitem" class="navlink" href="contact.html">Contact</a></li>
     </ul>
   </div>
 </header>
 
-<main class="container">
-  <section id="services" class="reveal" aria-labelledby="services-title">
-    <h2 id="services-title">Tutoring Services</h2>
-    <p class="lead">Who it’s for, what’s included, outcomes, and how to book.</p>
-
-    <div class="grid">
-      <div class="col-6 card">
-        <h3>11+ (Year 5–6)</h3>
-        <ul>
-          <li>For: pupils preparing for GL-style 11+ exams</li>
-          <li>Includes: Maths, English, VR/NVR foundations, exam skills</li>
-          <li>Outcomes: strong fundamentals, timing, confidence</li>
-        </ul>
-        <p><a class="cta secondary" href="/contact.html">Enquire about 11+</a></p>
-      </div>
-
-      <div class="col-6 card">
-        <h3>GCSE & A-Level</h3>
-        <ul>
-          <li>For: GCSE Mathematics/Statistics, A-Level Mathematics/Statistics</li>
-          <li>Includes: tailored topic plans, past paper practice, feedback</li>
-          <li>Outcomes: clarity, method, exam technique</li>
-        </ul>
-        <p><a class="cta secondary" href="/contact.html">Enquire about GCSE/A-Level</a></p>
-      </div>
-
-      <div class="col-12 card">
-        <h3>Monthly Webinars</h3>
-        <ul>
-          <li>For: parents & students seeking focused sessions</li>
-          <li>Includes: 45-minute topic deep-dives (placeholder)</li>
-          <li>Outcomes: targeted skills, practical tips</li>
-        </ul>
-        <p><a class="cta secondary" href="/contact.html">Join the next webinar</a></p>
+<main>
+  <!-- Hero Section with Blackboard image -->
+  <section class="hero reveal">
+    <div class="hero-bg">
+      <img id="hero-img" src="assets/blackboard.jpeg" alt="Blackboard background" />
+    </div>
+    <div class="hero-content container">
+      <div class="hero-box">
+        <h1>Tutoring Services</h1>
+        <p class="kicker">
+          I provide specialist one-to-one tutoring in Mathematics and Statistics.  
+          Whether you are preparing for GCSEs, A-Levels, or building advanced skills for university-level study, my lessons are clear, structured, and adapted to each student’s needs.  
+        </p>
+        <p>
+          Lessons focus on understanding theory, working through examples, and applying knowledge to practice questions.  
+          Students gain both confidence and exam technique, ensuring strong results and deeper subject mastery.
+        </p>
       </div>
     </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="reveal container" aria-labelledby="testimonials-title">
+    <h2 id="testimonials-title">What parents say</h2>
+    <div class="testimonials" aria-label="Testimonials">
+      <div class="testimonial">
+        <p>“Ben has transformed my daughter’s confidence in maths. She now enjoys the subject and performs far better at school.”</p>
+        <span class="reviewer">— Claire M.</span>
+      </div>
+      <div class="testimonial">
+        <p>“Excellent explanations and a patient approach — my son made rapid progress in statistics with Ben’s support.”</p>
+        <span class="reviewer">— James H.</span>
+      </div>
+      <div class="testimonial">
+        <p>“Professional, reliable, and results-focused. Highly recommend for both GCSE and A-Level preparation.”</p>
+        <span class="reviewer">— Priya K.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- DBS GIF -->
+  <section class="dbs">
+    <img src="assets/EDBS.gif" alt="Enhanced DBS Checked" />
   </section>
 </main>
 
 <footer>
   <div class="container foot">
     <div class="small">Email: <a href="mailto:ben.jp.staunton@iclould.com">ben.jp.staunton@iclould.com</a> · LinkedIn: <a href="https://www.linkedin.com/in/ben-staunton/" target="_blank" rel="noopener">ben-staunton</a></div>
-    <div class="small">© <span id="year"></span> Staunton Tutoring · <a href="#">Small print</a></div>
+    <div class="small">© <span id="year"></span> Staunton Tutoring</div>
   </div>
 </footer>
 </body>
