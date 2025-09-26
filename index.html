@@ -8,16 +8,16 @@
 <meta property="og:title" content="Staunton Tutoring" />
 <meta property="og:description" content="High-quality, personal 11+ and Maths tutoring for ages 9–18." />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="/assets/og-placeholder.png" />
+<meta property="og:image" content="assets/og-placeholder.png" />
 <meta property="og:url" content="/" />
 
-<link rel="icon" href="/logo.png" type="image/png" />
-<link rel="apple-touch-icon" href="/logo.png" />
+<link rel="icon" href="logo.png" type="image/png" />
+<link rel="apple-touch-icon" href="logo.png" />
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="assets/styles.css?v=2" />
+<link rel="stylesheet" href="assets/styles.css?v=3" />
 <script defer src="assets/script.js"></script>
 </head>
 <body>
@@ -37,15 +37,19 @@
   </div>
 </header>
 
-<main class="container">
-  <!-- Hero Section -->
+<main>
+  <!-- Hero Section with faded background -->
   <section class="hero reveal">
-    <img src="assets/nefsif.jpeg" alt="Tutoring inspiration" class="hero-img" />
-    <h1>High-quality, personal 11+ & Maths tutoring</h1>
-    <p class="kicker">Warm, structured support for Year 5–6 (11+) and GCSE / A-Level. Clear explanations, practical examples, and confident results.</p>
-    <div class="cta-row">
-      <a class="cta primary" href="contact.html">Book a free consultation</a>
-      <a class="cta secondary" href="about.html">Learn about my approach</a>
+    <div class="hero-bg">
+      <img src="assets/nefsif.jpeg" alt="Tutoring inspiration" />
+    </div>
+    <div class="hero-content container">
+      <h1>High-quality, personal 11+ & Maths tutoring</h1>
+      <p class="kicker">Warm, structured support for Year 5–6 (11+) and GCSE / A-Level. Clear explanations, practical examples, and confident results.</p>
+      <div class="cta-row">
+        <a class="cta primary" href="contact.html">Book a free consultation</a>
+        <a class="cta secondary" href="about.html">Learn about my approach</a>
+      </div>
     </div>
   </section>
 
@@ -56,27 +60,24 @@
   </section>
 
   <!-- Explore Section -->
-  <section aria-labelledby="tiles-title" class="reveal">
+  <section aria-labelledby="tiles-title" class="reveal container">
     <h2 id="tiles-title">Explore</h2>
     <p class="lead">Quick links to the most-visited areas.</p>
     <div class="tiles">
       <a class="tile" href="services.html">
-        <div class="overlay" aria-hidden="true"></div>
         <div class="content"><div><h3>Tutoring Services</h3><p>11+, GCSE, A-Level, and monthly webinars</p></div></div>
       </a>
       <a class="tile" href="about.html">
-        <div class="overlay" aria-hidden="true"></div>
         <div class="content"><div><h3>About</h3><p>Bio and lesson structure</p></div></div>
       </a>
       <a class="tile" href="contact.html">
-        <div class="overlay" aria-hidden="true"></div>
         <div class="content"><div><h3>Contact</h3><p>Get in touch to start</p></div></div>
       </a>
     </div>
   </section>
 
   <!-- Testimonials -->
-  <section class="reveal" aria-labelledby="testimonials-title">
+  <section class="reveal container" aria-labelledby="testimonials-title">
     <h2 id="testimonials-title">What parents say</h2>
     <p class="lead">Short testimonials (placeholder copy).</p>
     <div class="testimonials" aria-label="Testimonials">
