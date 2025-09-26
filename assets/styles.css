@@ -259,3 +259,46 @@ footer {
   max-width: 600px;
   text-align: center;
 }
+
+/* ---------- About Page Split Layout ---------- */
+.about-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  margin: 4rem auto;
+  max-width: 1100px;
+}
+
+.about-text {
+  flex: 1.2;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.about-photo {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+}
+
+.about-photo img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Responsive fallback for smaller screens */
+@media (max-width: 768px) {
+  .about-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .about-text {
+    margin-bottom: 2rem;
+  }
+}
