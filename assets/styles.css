@@ -245,3 +245,17 @@ footer {
   max-width: 600px;
   text-align: center;
 }
+
+/* Contact section specific */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  margin-top: 2rem;
+}
+
+.contact-box {
+  max-width: 600px;
+  text-align: center;
+}
