@@ -1,7 +1,7 @@
 // Auto-update year
 document.querySelectorAll('#year').forEach(e => e.textContent = new Date().getFullYear());
 
-// Hero image zoom effect
+// Hero image zoom effect (start at 100%, end at 120%)
 const heroImg = document.getElementById('hero-img');
 const heroSection = document.querySelector('.hero');
 
@@ -10,8 +10,9 @@ window.addEventListener('scroll', () => {
   const windowHeight = window.innerHeight;
 
   if (rect.top < windowHeight && rect.bottom > 0) {
-    const progress = 1 - (rect.bottom / (rect.height + windowHeight));
-    const scale = 1 + Math.min(progress, 1) * 0.2; // up to 120%
+    const totalDistance = rect.height + windowHeight;
+    const progress = 1 - (rect.bottom / totalDistance);
+    const scale = 1 + Math.max(0, Math.min(progress, 1)) * 0.2; // from 1 → 1.2
     heroImg.style.transform = `scale(${scale})`;
   }
 });
