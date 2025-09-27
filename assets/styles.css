@@ -359,3 +359,38 @@ footer {
     padding: 1rem;
   }
 }
+
+/* Portrait orientation overrides */
+@media screen and (orientation: portrait) and (max-width: 1024px) {
+  .hero {
+    height: auto !important;
+    padding: 1.5rem 1rem;
+    display: block; /* stack instead of overlay */
+    text-align: center;
+  }
+
+  .hero-bg {
+    position: relative;
+    height: auto !important;
+  }
+
+  .hero-bg img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: top center !important;
+    transform: none !important; /* cancel any scaling */
+  }
+
+  .hero-content {
+    position: relative !important;
+    margin-top: 1rem;
+    max-width: 100% !important;
+  }
+
+  .hero-box {
+    background: none;
+    box-shadow: none;
+    padding: 1rem;
+  }
+}
