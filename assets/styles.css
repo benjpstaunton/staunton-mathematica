@@ -347,3 +347,27 @@ form {
   gap: 1.5rem; /* space between HS and grad images */
   align-items: center;
 }
+
+/* Mobile-friendly hero adjustments */
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;              /* reduce vertical space so image isn’t stretched too much */
+    padding: 3rem 1rem;
+    text-align: center;        /* center text for small screens */
+  }
+
+  .hero-bg img {
+    object-fit: contain !important;  /* fit whole image inside screen */
+    object-position: center top;     /* keep it centered at the top */
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-box {
+    padding: 1.5rem;
+  }
+}
