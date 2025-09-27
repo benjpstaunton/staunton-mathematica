@@ -285,9 +285,8 @@ footer {
   align-items: center;
 }
 
-/* ---------- Responsive ---------- */
+/* ---------- Responsive Hero Fix ---------- */
 @media (max-width: 768px) {
-  /* About page */
   .about-hero {
     flex-direction: column;
     text-align: center;
@@ -296,12 +295,12 @@ footer {
     margin-bottom: 2rem;
   }
 
-  /* Hero fixes */
   .hero {
     height: auto;
     min-height: 60vh;
     padding: 2rem 1rem;
     text-align: center;
+    display: block;
   }
 
   .hero-bg {
@@ -327,86 +326,79 @@ footer {
   }
 }
 
-/* Mobile-friendly hero fix */
-@media (max-width: 768px) {
-  .hero {
-    height: auto !important;      /* let image height decide */
-    min-height: 60vh;
-    padding: 2rem 1rem;
-    display: block;               /* reset flex so text flows naturally */
-    text-align: center;
-  }
+/* ---------- Mobile Nav ---------- */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
 
-  .hero-bg {
-    position: relative;
-    height: auto !important;
-  }
+.nav-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: var(--brand);
+  border-radius: 2px;
+  transition: 0.3s;
+}
 
-  .hero-bg img {
-    width: 100% !important;
-    height: auto !important;      /* scale proportionally */
-    object-fit: contain !important;
-    object-position: top center !important;
-  }
+@media screen and (max-width: 768px) {
+  .nav-toggle { display: flex; }
 
-  .hero-content {
-    position: relative;
-    max-width: 100%;
-    margin-top: 1rem;
-  }
-
-  .hero-box {
+  .nav ul {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 1rem;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    flex-direction: column;
     padding: 1rem;
+    gap: 1rem;
+    z-index: 999;
+  }
+
+  .nav ul.show {
+    display: flex;
+    animation: fadeIn 0.2s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to   { opacity: 1; transform: translateY(0); }
   }
 }
 
-/* Portrait orientation overrides */
-@media screen and (orientation: portrait) and (max-width: 1024px) {
-  .hero {
-    height: auto !important;
-    padding: 1.5rem 1rem;
-    display: block; /* stack instead of overlay */
-    text-align: center;
-  }
-
-  .hero-bg {
-    position: relative;
-    height: auto !important;
-  }
-
-  .hero-bg img {
-    width: 100% !important;
-    height: auto !important;
-    object-fit: contain !important;
-    object-position: top center !important;
-    transform: none !important; /* cancel any scaling */
-  }
-
-  .hero-content {
-    position: relative !important;
-    margin-top: 1rem;
-    max-width: 100% !important;
-  }
-
-  .hero-box {
-    background: none;
-    box-shadow: none;
-    padding: 1rem;
-  }
+/* Hamburger into X */
+.nav-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Stack CTA buttons on small portrait screens */
+/* ---------- CTA Buttons Stack ---------- */
 @media screen and (max-width: 768px) {
   .cta-row {
     display: flex;
     flex-direction: column;
-    gap: 1rem; /* space between buttons */
+    gap: 1rem;
     align-items: center;
   }
-
   .cta-row .cta {
-    width: 100%;        /* make buttons fill width nicely */
-    max-width: 300px;   /* optional: prevent them being too wide */
+    width: 100%;
+    max-width: 300px;
     text-align: center;
   }
 }
