@@ -40,6 +40,11 @@
 </header>
 
 <main>
+  <!-- Success Banner -->
+  <div id="form-success" class="success-banner" style="display:none;">
+    ✅ Thank you for your enquiry — I’ll be in touch shortly.
+  </div>
+
   <!-- Hero Section with zooming background -->
   <section class="hero reveal">
     <div class="hero-bg">
@@ -91,5 +96,16 @@
     <div class="small">© <span id="year"></span> Staunton Tutoring</div>
   </div>
 </footer>
+
+<script>
+// Success banner trigger after Netlify form submission redirect
+if (window.location.search.includes("submitted=true")) {
+  const banner = document.getElementById("form-success");
+  if (banner) {
+    banner.style.display = "block";
+    setTimeout(() => banner.style.display = "none", 8000);
+  }
+}
+</script>
 </body>
 </html>
