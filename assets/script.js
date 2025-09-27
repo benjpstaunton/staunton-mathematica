@@ -1,7 +1,7 @@
 // Auto-update year
 document.querySelectorAll('#year').forEach(e => e.textContent = new Date().getFullYear());
 
-// Hero image zoom effect (desktop + landscape only)
+// ------------------- Hero Zoom Effect -------------------
 function enableHeroZoom() {
   const heroImg = document.getElementById('hero-img');
   const heroSection = document.querySelector('.hero');
@@ -9,7 +9,6 @@ function enableHeroZoom() {
 
   window.addEventListener('scroll', () => {
     const rect = heroSection.getBoundingClientRect();
-
     if (rect.top < window.innerHeight && rect.bottom > 0) {
       const totalDistance = rect.height;
       const scrolled = Math.min(Math.max(-rect.top, 0), totalDistance);
@@ -23,12 +22,20 @@ function enableHeroZoom() {
 function setupHeroZoom() {
   const isWide = window.innerWidth > 768;
   const isPortrait = window.matchMedia("(orientation: portrait)").matches;
-
   if (isWide && !isPortrait) {
     enableHeroZoom();
   }
 }
-
-// Run on load + when resized
 setupHeroZoom();
 window.addEventListener('resize', setupHeroZoom);
+
+// ------------------- Mobile Nav Toggle -------------------
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.getElementById('primary-menu');
+
+if (navToggle && navMenu) {
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+    navToggle.classList.toggle('open');
+  });
+}
