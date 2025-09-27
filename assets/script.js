@@ -1,11 +1,12 @@
 // Auto-update year
 document.querySelectorAll('#year').forEach(e => e.textContent = new Date().getFullYear());
 
-// Hero image zoom effect (desktop only)
-const heroImg = document.getElementById('hero-img');
-const heroSection = document.querySelector('.hero');
+// Hero image zoom effect (desktop + landscape only)
+function enableHeroZoom() {
+  const heroImg = document.getElementById('hero-img');
+  const heroSection = document.querySelector('.hero');
+  if (!heroImg || !heroSection) return;
 
-if (heroImg && heroSection && window.innerWidth > 768) {
   window.addEventListener('scroll', () => {
     const rect = heroSection.getBoundingClientRect();
 
@@ -18,3 +19,16 @@ if (heroImg && heroSection && window.innerWidth > 768) {
     }
   });
 }
+
+function setupHeroZoom() {
+  const isWide = window.innerWidth > 768;
+  const isPortrait = window.matchMedia("(orientation: portrait)").matches;
+
+  if (isWide && !isPortrait) {
+    enableHeroZoom();
+  }
+}
+
+// Run on load + when resized
+setupHeroZoom();
+window.addEventListener('resize', setupHeroZoom);
