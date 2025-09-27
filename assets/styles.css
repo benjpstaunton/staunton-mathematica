@@ -478,3 +478,14 @@ button.cta {
   margin-bottom: 1rem;
   border-radius: 0.5rem;
 }
+
+.success-banner {
+  background: #e6ffed;
+  color: #1a7f37;
+  border: 1px solid #a6f3c1;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
