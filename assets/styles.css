@@ -67,7 +67,7 @@ header {
 
 .nav a.navlink:hover {
   text-decoration: none;
-  color: var(--brand-600); /* optional: darker blue on hover */
+  color: var(--brand-600);
 }
 
 /* ---------- Hero section ---------- */
@@ -232,21 +232,7 @@ footer {
   border-top: 1px solid var(--border);
 }
 
-/* Contact section specific */
-.contact-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 60vh;
-  margin-top: 2rem;
-}
-
-.contact-box {
-  max-width: 600px;
-  text-align: center;
-}
-
-/* Contact section specific */
+/* ---------- Contact ---------- */
 .contact-section {
   display: flex;
   justify-content: center;
@@ -287,87 +273,56 @@ footer {
 .about-photo img {
   max-width: 100%;
   height: auto;
-  border-radius: 0;       /* remove rounded corners */
-  box-shadow: none;       /* remove shadow box */
-  background: transparent; /* ensure no background */
-}
-
-/* Responsive fallback for smaller screens */
-@media (max-width: 768px) {
-  .about-hero {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .about-text {
-    margin-bottom: 2rem;
-  }
-}
-
-/* ---------- Contact Form ---------- */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  margin-top: 1.5rem;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-
-.form-group label {
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  color: var(--brand);
-}
-
-.form-group input,
-.form-group textarea {
-  padding: 0.75rem 1rem;
-  border: 1px solid var(--border);
-  border-radius: 0.5rem;
-  font-family: inherit;
-  font-size: 1rem;
-  resize: vertical;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: var(--brand);
-  box-shadow: 0 0 0 2px rgba(0, 45, 114, 0.2);
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
 }
 
 .about-photo.stacked {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem; /* space between HS and grad images */
+  gap: 1.5rem;
   align-items: center;
 }
 
-/* Mobile-friendly hero adjustments */
+/* ---------- Responsive ---------- */
 @media (max-width: 768px) {
+  /* About page */
+  .about-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-text {
+    margin-bottom: 2rem;
+  }
+
+  /* Hero fixes */
   .hero {
-    height: 60vh;              /* reduce vertical space so image isn’t stretched too much */
-    padding: 3rem 1rem;
-    text-align: center;        /* center text for small screens */
+    height: auto;
+    min-height: 60vh;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .hero-bg {
+    position: relative;
+    height: auto;
   }
 
   .hero-bg img {
-    object-fit: contain !important;  /* fit whole image inside screen */
-    object-position: center top;     /* keep it centered at the top */
+    object-fit: contain !important;
+    object-position: center top !important;
     width: 100%;
-    height: 100%;
+    height: auto;
   }
 
   .hero-content {
+    position: relative;
     max-width: 100%;
+    margin-top: 1rem;
   }
 
   .hero-box {
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
 }
