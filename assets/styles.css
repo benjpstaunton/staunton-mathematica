@@ -326,3 +326,36 @@ footer {
     padding: 1.25rem;
   }
 }
+
+/* Mobile-friendly hero fix */
+@media (max-width: 768px) {
+  .hero {
+    height: auto !important;      /* let image height decide */
+    min-height: 60vh;
+    padding: 2rem 1rem;
+    display: block;               /* reset flex so text flows naturally */
+    text-align: center;
+  }
+
+  .hero-bg {
+    position: relative;
+    height: auto !important;
+  }
+
+  .hero-bg img {
+    width: 100% !important;
+    height: auto !important;      /* scale proportionally */
+    object-fit: contain !important;
+    object-position: top center !important;
+  }
+
+  .hero-content {
+    position: relative;
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+
+  .hero-box {
+    padding: 1rem;
+  }
+}
