@@ -5,7 +5,6 @@ document.querySelectorAll('#year').forEach(e => e.textContent = new Date().getFu
 const heroImg = document.getElementById('hero-img');
 const heroSection = document.querySelector('.hero');
 
-// Only enable zoom on wider screens
 if (heroImg && heroSection && window.innerWidth > 768) {
   window.addEventListener('scroll', () => {
     const rect = heroSection.getBoundingClientRect();
