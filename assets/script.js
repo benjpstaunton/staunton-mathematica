@@ -39,3 +39,13 @@ if (navToggle && navMenu) {
     navToggle.classList.toggle('open');
   });
 }
+
+// Show success banner if redirected after form submission
+if (window.location.search.includes("submitted=true")) {
+  const banner = document.getElementById("form-success");
+  if (banner) {
+    banner.style.display = "block";
+    // optional: hide again after 8s
+    setTimeout(() => banner.style.display = "none", 8000);
+  }
+}
