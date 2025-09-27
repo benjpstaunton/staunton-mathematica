@@ -394,3 +394,19 @@ footer {
     padding: 1rem;
   }
 }
+
+/* Stack CTA buttons on small portrait screens */
+@media screen and (max-width: 768px) {
+  .cta-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* space between buttons */
+    align-items: center;
+  }
+
+  .cta-row .cta {
+    width: 100%;        /* make buttons fill width nicely */
+    max-width: 300px;   /* optional: prevent them being too wide */
+    text-align: center;
+  }
+}
