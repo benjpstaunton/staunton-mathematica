@@ -40,13 +40,17 @@
 </header>
 
 <main>
+  <div id="form-success" class="success-banner" style="display:none;">
+    ✅ Thank you for your enquiry — I’ll be in touch shortly.
+  </div>
+  
   <!-- Contact Form -->
   <section class="contact-section container">
     <div class="hero-box contact-box">
       <h1>Contact Me</h1>
       <p>Please fill in the form below to enquire about tutoring or arrange a free consultation:</p>
       
-      <form name="contact" method="POST" data-netlify="true" action="/?submitted=true">
+      <form name="contact" method="POST" data-netlify="true" action="/contact.html?submitted=true">
         <input type="hidden" name="form-name" value="contact" />
 
         <div class="form-group">
