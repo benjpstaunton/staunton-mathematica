@@ -49,3 +49,23 @@ if (window.location.search.includes("submitted=true")) {
     setTimeout(() => banner.style.display = "none", 8000);
   }
 }
+
+// ------------------- Mobile Nav Toggle -------------------
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.getElementById('primary-menu');
+
+if (navToggle && navMenu) {
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+    navToggle.classList.toggle('open');
+  });
+}
+
+// ------------------- Success Banner -------------------
+if (window.location.search.includes("submitted=true")) {
+  const banner = document.getElementById("form-success");
+  if (banner) {
+    banner.style.display = "block";
+    setTimeout(() => banner.style.display = "none", 8000);
+  }
+}
