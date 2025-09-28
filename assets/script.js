@@ -1,4 +1,4 @@
-// Auto-update year
+// ------------------- Auto-update year -------------------
 document.querySelectorAll('#year').forEach(e => e.textContent = new Date().getFullYear());
 
 // ------------------- Hero Zoom Effect -------------------
@@ -30,22 +30,30 @@ setupHeroZoom();
 window.addEventListener('resize', setupHeroZoom);
 
 // ------------------- Mobile Nav Toggle -------------------
-const navToggle = document.querySelector('.nav-toggle');
-const navMenu = document.getElementById('primary-menu');
+document.addEventListener("DOMContentLoaded", () => {
+  const navToggle = document.querySelector(".nav-toggle");
+  const navMenu = document.getElementById("primary-menu");
 
-if (navToggle && navMenu) {
-  navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('show');
-    navToggle.classList.toggle('open');
-  });
-}
+  if (navToggle && navMenu) {
+    navToggle.addEventListener("click", (e) => {
+      e.preventDefault();
+      navMenu.classList.toggle("show");
+      navToggle.classList.toggle("open");
+    });
+  }
+});
 
-// Show success banner if redirected after form submission
-if (window.location.search.includes("submitted=true")) {
+// ------------------- Contact Form Success Banner -------------------
+if (window.location.pathname.endsWith("contact.html") && window.location.search.includes("submitted=true")) {
   const banner = document.getElementById("form-success");
   if (banner) {
     banner.style.display = "block";
-    // optional: hide again after 8s
+
+    // Clean the URL so the banner does not persist on refresh or revisit
+    const newUrl = window.location.pathname;
+    window.history.replaceState({}, document.title, newUrl);
+
+    // Auto-hide after 8s (optional)
     setTimeout(() => banner.style.display = "none", 8000);
   }
 }
