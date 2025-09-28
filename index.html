@@ -96,16 +96,5 @@
     <div class="small">© <span id="year"></span> Staunton Tutoring</div>
   </div>
 </footer>
-
-<script>
-// Success banner trigger after Netlify form submission redirect
-if (window.location.search.includes("submitted=true")) {
-  const banner = document.getElementById("form-success");
-  if (banner) {
-    banner.style.display = "block";
-    setTimeout(() => banner.style.display = "none", 8000);
-  }
-}
-</script>
 </body>
 </html>
